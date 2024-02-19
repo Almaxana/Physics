@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.plot.ly/plotly-2.29.1.min.js" charset="utf-8"></script>
+    <style>
+        input[type="number"] {
+            width: 250px;
+            padding: 10px;
+        }
+    </style>
+    <title>Катушка Гельмгольца</title>
+</head>
+
+<body>
+<form onsubmit="return CountFunction(this)" method ="post">
+    <label>Количество витков:</label>
+    <input  type="number" id="WireTurnsNumber" placeholder="Натуральное число">
+    <br><br>
+
+    <label>Сила тока:</label>
+    <input type="number" id="CoilCurrent" placeholder="Положительное число ампер">
+    <br><br>
+
+    <label>Радиус катушек:</label>
+    <input type="number" id="Radius" placeholder="Положительное число метров">
+    <br><br>
+
+    <input type="submit"  value="Построить график">
+</form>
+
+
+<div id="myDiv"></div>
+<script src="index.js"></script>
+</body>
+
+</html>
