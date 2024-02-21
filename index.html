@@ -15,15 +15,18 @@
 <body>
 <form onsubmit="return CountFunction(this)" method ="post">
     <label>Количество витков:</label>
-    <input  type="number" id="WireTurnsNumber" placeholder="Натуральное число">
+    <input  type="range" min="0" max="20" oninput="document.getElementById('rangeValLabel1').innerHTML = this.value;" step="1" id="WireTurnsNumber" placeholder="Натуральное число">
+    <em id="rangeValLabel1" style="font-style: normal;"></em>
     <br><br>
 
-    <label>Сила тока:</label>
-    <input type="number" id="CoilCurrent" placeholder="Положительное число ампер">
+    <label>Сила тока (А):</label>
+    <input type="range" min="0" max="200" oninput="document.getElementById('rangeValLabel2').innerHTML = this.value;" step="0.1" id="CoilCurrent" placeholder="Положительное число ампер">
+    <em id="rangeValLabel2" style="font-style: normal;"></em>
     <br><br>
 
-    <label>Радиус катушек:</label>
-    <input type="number" id="Radius" placeholder="Положительное число метров">
+    <label>Радиус катушек (м):</label>
+    <input type="range" min="0" max="1000" oninput="document.getElementById('rangeValLabel3').innerHTML = this.value;" step="0.1" id="Radius" placeholder="Положительное число метров">
+    <em id="rangeValLabel3" style="font-style: normal;"></em>
     <br><br>
 
     <input type="submit"  value="Построить график">
