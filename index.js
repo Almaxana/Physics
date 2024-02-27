@@ -9,8 +9,8 @@ function CountFunction(){
     let y = [];
     let m = 4 * Math.PI * Math.pow(10, -7); //магнитная постоянная
 
-    let x_axis = 10000;
-    for(let i = -x_axis; i < x_axis; ++i)
+    
+    for(let i = -6*Radius; i < 7*Radius; i+=0.01)
     {
         x.push(i);
         y.push(CoilCurrent * WireTurnsNumber * Radius * Radius * m / 2 * (1/Math.pow(Radius*Radius + i*i, 1.5) + 1/Math.pow(Radius*Radius + (i - Radius) * (i - Radius), 1.5)));
